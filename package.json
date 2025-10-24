@@ -1,0 +1,22 @@
+{
+  "name": "gracebot",
+  "version": "1.0.0",
+  "description": "GraceBot — Student Counselling Chatbot for Desktop",
+  "main": "main.js",
+  "author": "Phera Inc.",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor/cli": "^7.4.4",
+    "@capacitor/core": "^7.4.4",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "electron": "^38.4.0",
+    "express": "^5.1.0",
+    "openai": "^6.6.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "server": "node server.js"
+  }
+}

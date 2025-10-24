@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GraceBot 🤖 | Student Counselling Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chatbot-container" id="chatbot">
+    <div class="chat-header">
+      <h2>GraceBot 🤖</h2>
+      <p>Your friendly student support companion</p>
+    </div>
+
+    <div class="chat-box" id="chat-box">
+      <div class="bot-message fade-in">
+        Hey there 👋 I’m <b>GraceBot</b>.<br>
+        You can talk to me about school stress, friends, or anything on your mind — I’m here to listen 💛
+      </div>
+    </div>
+
+    <div class="typing" id="typing">GraceBot is typing<span>.</span><span>.</span><span>.</span></div>
+
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type how you feel..." />
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <button class="chat-toggle" id="chat-toggle">💬 Talk to GraceBot</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
