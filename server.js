@@ -7,17 +7,15 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Initialize OpenAI client with the environment variable
+// Initialize OpenAI client using Railway or Vercel environment variable
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || "no-api-key-found",
 });
 
-// Default route to confirm server is running
 app.get("/", (req, res) => {
-  res.send("✨ GraceBot is live and listening!");
+  res.send("✨ GraceBot is alive and listening on Railway!");
 });
 
-// Chat endpoint
 app.post("/chat", async (req, res) => {
   try {
     const userMessage = req.body.message;
@@ -40,10 +38,10 @@ app.post("/chat", async (req, res) => {
 
     res.json({ reply: response.choices[0].message.content });
   } catch (error) {
-    console.error("❌ Error talking to OpenAI:", error);
+    console.error("❌ Error from OpenAI:", error);
     res.status(500).json({ error: "AI request failed." });
   }
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`✅ GraceBot running on port ${PORT}`));
+app.listen(PORT, () => console.log(`✅ GraceBot server running on port ${PORT}`));
